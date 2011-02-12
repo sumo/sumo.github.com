@@ -9,7 +9,7 @@
         <dependency>
             <groupId>com.jnaerator</groupId>
             <artifactId>jnaerator</artifactId>
-            <version>0.9.5</version>
+            <version>0.9.6</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
