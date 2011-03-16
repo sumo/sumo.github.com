@@ -2,8 +2,8 @@
  
 for DIR in $(find ./maven-repo -type d); do
   (
-    echo -e "<html>\n<body>\n<h1>Directory listing</h1>\n<hr/>\n<pre>"
-    ls -1pa "${DIR}" | grep -v "^\./$" | grep -v "^index\.html$" | awk '{ printf "<a href=\"%s\">%s</a>\n",$1,$1 }'
-    echo -e "</pre>\n</body>\n</html>"
+    echo "<html><body><h1>Directory listing</h1><hr/><pre>"
+    ls -1pa "${DIR}" | grep -v "^\./$" | grep -v "^index\.html$" | awk '{ printf "<a href=\"%s\">%s</a>",$1,$1 }'
+    echo "</pre></body></html>"
   ) > "${DIR}/index.html"
 done
